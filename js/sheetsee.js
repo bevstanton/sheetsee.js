@@ -278,8 +278,8 @@ function determineType (lineItem) {
 function loadMap (mapOptions) {
   if (!mapOptions.data) return // no data, no map
   var map = L.map(mapOptions.mapDiv)
-  var tiles = mapOptions.tiles || 'http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-  var attribution = '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  var tiles = mapOptions.tiles || 'https://{s}.tile.osm.org/{z}/{x}/{y}.png'
+  var attribution = '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
 
   L.tileLayer(tiles, {attribution: attribution}).addTo(map)
   // Set behavior
@@ -370,7 +370,7 @@ module.exports.loadMap = loadMap
 }}),L.MarkerClusterGroup.include({refreshClusters:function(e){return e?e instanceof L.MarkerClusterGroup?e=e._topClusterLevel.getAllChildMarkers():e instanceof L.LayerGroup?e=e._layers:e instanceof L.MarkerCluster?e=e.getAllChildMarkers():e instanceof L.Marker&&(e=[e]):e=this._topClusterLevel.getAllChildMarkers(),this._flagParentsIconsNeedUpdate(e),this._refreshClustersIcons(),this.options.singleMarkerMode&&this._refreshSingleMarkerModeMarkers(e),this},_flagParentsIconsNeedUpdate:function(e){var t,i;for(t in e)for(i=e[t].__parent;i;)i._iconNeedsUpdate=!0,i=i.__parent},_refreshSingleMarkerModeMarkers:function(e){var t,i;for(t in e)i=e[t],this.hasLayer(i)&&i.setIcon(this._overrideMarkerIcon(i))}}),L.Marker.include({refreshIconOptions:function(e,t){var i=this.options.icon;return L.setOptions(i,e),this.setIcon(i),t&&this.__parent&&this.__parent._group.refreshClusters(this),this}})}(window,document);
 },{}],4:[function(require,module,exports){
 /*
- Leaflet 1.0.3, a JS library for interactive maps. http://leafletjs.com
+ Leaflet 1.0.3, a JS library for interactive maps. https://leafletjs.com
  (c) 2010-2016 Vladimir Agafonkin, (c) 2010-2011 CloudMade
 */
 (function (window, document, undefined) {
